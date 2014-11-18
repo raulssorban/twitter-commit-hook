@@ -10,7 +10,7 @@ Add both <b>post-commit</b> and <b>post-commit.py</b> to the .git/hooks folder o
  - Log into your Twitter account
  - Go to https://apps.twitter.com/ and click Create New App
  - Set the Name to "GitHub Commit Messages"
- - Set the Description to "Post GitHub commit messages to Twitter"
+ - Set the Description to "Tweet GitHub commit messages"
  - Set the Website to "https://www.github.com"
  - Accept the Developer Agreement and Create your Twitter application
 
@@ -18,6 +18,6 @@ Add both <b>post-commit</b> and <b>post-commit.py</b> to the .git/hooks folder o
  - Navigate to the Permissions tab and set Access to "Read and Write"
      - May require you to add mobile phone number to Twitter account
  - Navigate to the Keys and Access Tokens tab to "Create my access token"
- - Copy the API KEY, API SECRET, OAUTH KEY, and OAUTH SECRET into the script
+ - Add the APP_KEY, APP_SECRET, ACCESS_TOKEN, and ACCESS_TOKEN_SECRET to <b>post-commit.py</b>
  
 Demo Twitter Account: [jsuh_github](https://twitter.com/jsuh_github)

@@ -1,4 +1,5 @@
 #!/bin/sh
+REPO="$(basename `git rev-parse --show-toplevel`)"
 LAST="$(git log -1 --pretty=%B)"
 COMPARE="$(git log -1 HEAD~1 --pretty=%B)"
-python .git/hooks/post-commit.py "$LAST" "$COMPARE"
+python .git/hooks/post-commit.py "$REPO" "$LAST" "$COMPARE"
