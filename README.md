@@ -3,7 +3,8 @@
  - Install the library [Twython](https://github.com/ryanmcgrath/twython)
 
 ##Instructions
-Add both <b>post-commit</b> and <b>post-commit.py</b> to the .git/hooks folder of your current GitHub project.
+After setting up the Twitter application, run <b>installer.py</b>
+    python installer.py
 
 ##Setting up the Twitter Application
 ###Creating the Application
