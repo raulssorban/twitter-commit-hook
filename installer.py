@@ -1,11 +1,13 @@
-import sys, shutil
+import os
+import shutil
 from subprocess import call
 
-template = sys.executable[:-10] + 'templates\\'
-hooks = template + 'hooks\\'
+git_global = os.path.expanduser('~') + '/git_global/'
+hooks = git_global + 'hooks/'
+if not os.path.exists(hooks):
+	os.makedirs(hooks)
 
-call('mkdir ' + hooks, shell=True)
 shutil.copy('post-commit', hooks)
 shutil.copy('post-commit.py', hooks)
 
-call('git config --global init.templatedir "' + template + '"', shell=True)
+call('git config --global init.templatedir "' + git_global + '"', shell=True)
