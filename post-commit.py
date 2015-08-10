@@ -1,5 +1,4 @@
 import sys
-from subprocess import call
 from twython import Twython
 
 APP_KEY = '[APP_KEY]'

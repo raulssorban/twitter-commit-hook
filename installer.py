@@ -11,3 +11,5 @@ shutil.copy('post-commit', hooks)
 shutil.copy('post-commit.py', hooks)
 
 call('git config --global init.templatedir "' + git_global + '"', shell=True)
+call('chmod +x ' + hooks + 'post-commit', shell=True)
+call('chmod +x ' + hooks + 'post-commit.py', shell=True)
