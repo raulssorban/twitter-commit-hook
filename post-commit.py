@@ -1,12 +1,12 @@
 import sys
+from json
+
 from twython import Twython
 
-APP_KEY = '[APP_KEY]'
-APP_SECRET = '[APP_SECRET]' 
-ACCESS_TOKEN = '[ACCESS_TOKEN]'
-ACCESS_TOKEN_SECRET = '[ACCESS_TOKEN_SECRET]'
+with open('keys.json') as file:
+	keys = json.load(file)
 
-twitter = Twython(APP_KEY, APP_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+twitter = Twython(keys['APP_KEY'], keys['APP_SECRET'], keys['ACCESS_TOKEN'], keys['ACCESS_TOKEN_SECRET'])
 
 if sys.argv[2] != sys.argv[3]:
 	message = sys.argv[1] + ': ' + sys.argv[2]
